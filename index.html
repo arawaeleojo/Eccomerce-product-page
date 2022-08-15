@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sneakers</title>
+  <link rel="stylesheet" href="fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="fontawesome/css/fontawesome.min.css">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="fontawesome/css/main.css">
+  <link rel="stylesheet" href="fontawesome/css/responsive.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="#">Collection</a>
+      <a href="#">Men</a>
+      <a href="#">Women</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+    <nav class="navbar navbar-expand-md navbar-dark row">
+      <div class="col-sm-3">
+        <a class="navbar-brand " href="/">
+          <h3 class="navbar-text" style="font-size: 3vw; color: black;">sneakers</h3>
+        </a>
+        <button class="navbar-toggler btn-light" style="color: black" type="button" data-toggle="collapse"
+          data-target="#collapsibleNavbar">
+          <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse col-sm-7" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link font-weight-bolder" href="#">Collection</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link font-weight-bolder" href="#">Men</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link font-weight-bolder" href="#">Women</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link font-weight-bolder" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link font-weight-bolder" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm-2">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link font-weight-bolder text-dark cart_icon" href="#"><i class="fa fa-cart-arrow-down"
+                style="font-size: 23px;"></i></a>
+            <span class="badge"></span>
+          </li>
+          <li class="nav-item">
+            <img src="images/image-avatar.png" alt="" class="img-fluid" width="50px">
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <hr>
+    <div class="card shadow display">
+      <div class="card-body">
+        <h4 class="card-title">Cart</h4>
+        <hr>
+        <div class="empty">
+          <p class="text-center text-dark" style="margin-top: 30%;">Your cart is empty.</p>
+        </div>
+        <div class="full" style="display: none;">
+          <div class="row">
+
+            <div class="col-sm-4">
+              <img src="images/image-product-1-thumbnail.jpg" width="100%" class="img-fluid" alt="">
+            </div>
+            <div class="col-sm-8">
+              <p>Fall Limited Edition Sneakers</p>
+              <p>$125.00 &times; <span class="icon_number"></span> <span class="answer"></span></p>
+            </div>
+          </div>
+          <a href="#" class="btn" style="background-color: #ff7d1b; width: 100%;">Checkout</a>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-sm-6">
+        <img src="images/image-product-1.jpg" width="80%" class="mb-4">
+        <div class="row">
+          <div class="column">
+            <img src="images/image-product-1-thumbnail.jpg" style="width:70%" onclick="openModal();currentSlide(1)"
+              class="hover-shadow cursor">
+          </div>
+          <div class="column" style="margin-left: -5%;">
+            <img src="images/image-product-2-thumbnail.jpg" style="width:70%" onclick="openModal();currentSlide(2)"
+              class="hover-shadow cursor">
+          </div>
+          <div class="column" style="margin-left: -5%;">
+            <img src="images/image-product-3-thumbnail.jpg" style="width:70%" onclick="openModal();currentSlide(3)"
+              class="hover-shadow cursor">
+          </div>
+          <div class="column" style="margin-left: -5%;">
+            <img src="images/image-product-4-thumbnail.jpg" style="width:70%" onclick="openModal();currentSlide(4)"
+              class="hover-shadow cursor">
+          </div>
+        </div>
+
+        <div id="myModal" class="modal">
+          <span class="close cursor" onclick="closeModal()">&times;</span>
+          <div class="modal-content">
+
+            <div class="mySlides">
+              <div class="numbertext">1 / 4</div>
+              <img src="images/image-product-1.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">2 / 4</div>
+              <img src="images/image-product-2.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">3 / 4</div>
+              <img src="images/image-product-3.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img src="images/image-product-4.jpg" style="width:100%">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div class="row mt-4">
+              <div class="column">
+                <img class="demo cursor" src="images/image-product-1-thumbnail.jpg" style="width:70%"
+                  onclick="currentSlide(1)" alt="Nature and sunrise">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="images/image-product-2-thumbnail.jpg" style="width:70%"
+                  onclick="currentSlide(2)" alt="Snow">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="images/image-product-3-thumbnail.jpg" style="width:70%"
+                  onclick="currentSlide(3)" alt="Mountains and fjords">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="images/image-product-4-thumbnail.jpg" style="width:70%"
+                  onclick="currentSlide(4)" alt="Northern Lights">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 mt-5">
+        <p style="color: #ff7d1b;">SNEAKER COMPANY</p>
+        <h1 class="mb-5"><b>Fall Limited Edition Sneakers</b> </h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt sapiente perferendis rem repudiandae vero
+          voluptatum quidem quae mollitia, sequi odit repellat ab voluptas. Ipsum quo voluptatibus inventore voluptas
+          quia blanditiis?</p>
+        <h3 style="display: inline;"><b>$125.00</b></h3>
+        <button style="color: #ff7d1b; border: none; margin-left: 10px;">50%</button><br>
+        <del>
+          <p style="color: grey;">$ 250.00</p>
+        </del>
+        <button style="color: #ff7d1b; border: none;margin-left: 10px; padding: 2px 20px;"
+          class="decrement disabled "><b>-</b></button>
+        <span class="number"><b>0</b></span>
+        <button style="color: #ff7d1b; border: none;margin-left: 10px;" class="increment"><b>+</b></button>
+        <button class="btn cart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
